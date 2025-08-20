@@ -2,9 +2,11 @@ import allure
 from pagesObjects.LoginPage import LoginPage
 from pagesObjects.HomePage import HomePage
 
+
 def test_add_product_in_cart(setup):
     login_page = LoginPage(setup)
     home_page = HomePage(setup)
+
 
     #verify title_page
     with allure.step("Verify title page"):

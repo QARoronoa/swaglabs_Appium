@@ -6,6 +6,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from data.Checkout_data import Checkout_info
 
 @pytest.fixture(scope="function")
 def setup():
@@ -48,3 +49,7 @@ def setup():
     ])
 
     driver.quit()
+
+@pytest.fixture
+def fill_checkout_info():
+    return Checkout_info.checkoutinformation_form()

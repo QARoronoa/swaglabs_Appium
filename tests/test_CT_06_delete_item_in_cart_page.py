@@ -48,7 +48,6 @@ def test_delete_product_in_cart_page(setup):
         with allure.step("cart is empty"):
             cart_page.verify_cart_is_empty()
 
-        time.sleep(4)
 
 
 
