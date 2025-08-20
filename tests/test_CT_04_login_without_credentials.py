@@ -1,6 +1,5 @@
-import time
+
 import allure
-from pagesObjects.HomePage import HomePage
 from pagesObjects.LoginPage import LoginPage
 
 def test_login_without_credentials(setup):

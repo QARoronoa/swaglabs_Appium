@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -22,16 +23,16 @@ class LoginPage(BasePage):
 
 
     def fill_field_username(self, text):
-        print(f"🖊️ Saisie du nom d'utilisateur : {text}")
-        self.fill_field(LoginPage.username_field, text)
+        with allure.step(f"🖊️ Saisie du nom d'utilisateur : {text}"):
+            self.fill_field(LoginPage.username_field, text)
 
     def fill_field_password(self, text):
-        print(f"🔒 Saisie du mot de passe : {text}")
-        self.fill_field(LoginPage.password_field, text)
+        with allure.step(f"🔒 Saisie du mot de passe : {text}"):
+            self.fill_field(LoginPage.password_field, text)
 
     def click_on_login_button(self):
-        print("👆 Clic sur le bouton de connexion")
-        self.click_on_element(LoginPage.login_button)
+        with allure.step("👆 Clic sur le bouton de connexion"):
+            self.click_on_element(LoginPage.login_button)
 
     def verify_error_message_invalid_password_is_visible(self):
         error_message = self.verify_element_is_visible(self.error_message)

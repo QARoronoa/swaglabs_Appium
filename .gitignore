@@ -7,3 +7,8 @@ node_modules/
 .vscode/
 traces/
 *.html
+
+allure-results/
+allure-report/
+
+pytest.ini
